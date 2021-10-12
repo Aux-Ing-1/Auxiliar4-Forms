@@ -2,7 +2,7 @@
 
 En esta clase crearemos formularios utilizando las clases y métodos pre-hechos que nos entrega Django. Esta forma de hacerlo es útil para crear formularios sencillos que estén directamente asociados con el modelo de datos. Cabe destacar que, como en casi todo lo que hemos visto, esta no es la única manera de hacer esto y es posible que para distintas situaciones sea igual o más adecuado usar los métodos manuales que usamos anteriormente.
 
-Como siempre, clona este repositorio en tu computador y crea tu ambiente virtual con Django para empezar a trabajar. Si tienes dudas sobre esto consulta la [Auxiliar 1](https://github.com/Aux-Ing-1/Auxiliar1-GIT) o durante la clase.
+Como siempre, clona este repositorio en tu computador y crea tu ambiente virtual con Django para empezar a trabajar. Recuerda correr las migraciones antes de levantar el servidor. Si tienes dudas sobre esto consulta la [Auxiliar 1](https://github.com/Aux-Ing-1/Auxiliar1-GIT) o durante la clase.
 
 ## Django Form
 Primero crearemos un formulario personalizado con los campos específicos que indiquemos nosotros/as mismos/as. Este formulario NO estará asociado directamente a nuestro modelo de datos.
