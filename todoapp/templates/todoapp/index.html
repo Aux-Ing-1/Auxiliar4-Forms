@@ -19,14 +19,15 @@
                 </div>
             </div>
            <div id="segunda-parte" >
-               <form action="" method="post">
-                   {% csrf_token %} <!-- csrf token for basic security -->
-                   <!-- Formulario de nueva tarea-->
-                   <div class="card" id="nueva-tarea">
-                       <div class="card-header">
+                <form action="" method="post">
+                    {% csrf_token %} <!-- csrf token for basic security -->
+                    <!-- Formulario de nueva tarea-->
+                    <div class="card" id="nueva-tarea">
+                        <div class="card-header">
                             Nueva Tarea
-                       </div>
-                       <div class="card-body">
+                        </div>
+                        <div class="card-body">
+                            <!-- DE AQUÍ PARA ABAJO SE REEMPLAZA POR EL FORM -->
                             <div class="form-group">
                                <label for="titulo">Titulo de la tarea <span class="badge badge-secondary">Obligatorio</span></label>
                                <input type="text" id="titulo" class="form-control" placeholder="¿Qué tienes que hacer?" name="titulo" required>
@@ -44,39 +45,35 @@
                                {% endfor %}
                                </select>
                            </div>
-                            <!-- Fin formulario de nueva tarea -->
-                            <!-- Botones para agregar o eliminar tarea -->
-                           <div id="botones">
-                               <button class="btn btn-primary" name="taskAdd" type="submit"><i class="fa fa-plus icon"></i>Agregar tarea</button>
-                               <button disabled class="btn btn-danger" name="taskDelete" formnovalidate="" type="submit" onclick="$('input#sublist').click();"><i class="fa fa-trash-o icon"></i>Eliminar tarea</button>
-                           </div>
-                            <!-- Fin botones para agregar o eliminar tarea -->
-                           </div>
-                       </div>
-                   <div class="card" id="tareas-existentes" style="margin-top: 10px">
-                       <div class="card-header">
-                           Mis tareas
-                       </div>
-                        <!-- Lista de las tareas existentes -->
+                            <!-- DE AQUÍ PARA ARRIBA SE REEMPLAZA POR EL FORM -->
+                            <button class="btn btn-primary" name="taskAdd" type="submit">Agregar tarea</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="card" id="tareas-existentes" style="margin-top: 10px">
+                    <div class="card-header">
+                        Mis tareas
+                    </div>
+                    <!-- Lista de las tareas existentes -->
 
-                       <ul class="list-group list-group-flush">
-                       {% for tarea in tareas %} <!-- django template lang - for loop -->
-                           <li class="list-group-item">
-                              <div>
-                                   <input type="checkbox" class="taskCheckbox" name="checkedbox" id="{{ tarea.id }}" value="{{ tarea.id }}">
-                                    <label for="{{ tarea.id }}"><span class="complete-">{{ tarea.titulo }}</span></label>
-                                   <span class="badge badge-info">{{ tarea.categoria }}</span>
+                    <ul class="list-group list-group-flush">
+                    {% for tarea in tareas %} <!-- django template lang - for loop -->
+                        <li class="list-group-item">
+                        <div>
+                                <input type="checkbox" class="taskCheckbox" name="checkedbox" id="{{ tarea.id }}" value="{{ tarea.id }}">
+                                <label for="{{ tarea.id }}"><span class="complete-">{{ tarea.titulo }}</span></label>
+                                <span class="badge badge-info">{{ tarea.categoria }}</span>
+                        </div>
+                            <div>
+                                <p>{{tarea.contenido}}</p>
                             </div>
-                               <div>
-                                   <p>{{tarea.contenido}}</p>
-                               </div>
 
-                           </li>
-                       {% endfor %}
-                       </ul>
-                        <!-- Fin de la lista de tareas existentes-->
-                   </div>
-               </form>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    <!-- Fin de la lista de tareas existentes-->
+                </div>
+                    
            </div> <!-- div segunda parte -->
        </div><!-- container -->
 
