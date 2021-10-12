@@ -32,7 +32,7 @@ def tareas(request):
 	...
   if request.method == "GET":
      form_tarea = NuevaTareaForm()
-     return render(request, "todoapp/index.html", {"tareas": mis_tareas, "form_tarea":form_tarea})
+     return render(request, "todoapp/index.html", {"tareas": mis_tareas, "form_tarea": form_tarea})
 ```
 
 Por otro lado, debemos re-definir lo que haremos si recibimos una request POST, es decir, cuando recibamos un formulario con data.
@@ -50,7 +50,7 @@ def tareas(request):
            Tarea.objects.create(**cleaned_data,owner=request.user)
        else:
            Tarea.objects.create(**cleaned_data)
-    return redirect("/tarea") # recargar la página
+    return render(request, "todoapp/index.html", {"tareas": mis_tareas, "form_tarea": form_tarea})
 ```
 Notemos que esta vez al crear `form_tarea` le estamos entregando la request POST como parámetro. De esta forma creamos un `NuevaTareaForm` con la data que recibimos. Luego validamos la información (más adelante hablaremos de esto), y si es correcta, creamos una nueva Tarea con la data recibida, asociándola a un User si corresponde.
 
@@ -123,7 +123,7 @@ if request.method == "POST":
 		if request.user.is_authenticated:
 			nueva_tarea.owner = request.user
 			nueva_tarea.save()  # save() de Model
-	return redirect("/tareas")  # recargar la página.
+	return render(request, "todoapp/index.html", {"tareas": mis_tareas, "form_tarea": form_tarea})
 ```
 Notemos que, dado que `form_tarea` está directamente ligado a un model (en este caso, `Tarea`), podemos usar su método `.save()` directamente.
 
