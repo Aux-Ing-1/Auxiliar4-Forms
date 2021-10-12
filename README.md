@@ -159,3 +159,8 @@ def clean_<nombre_del_field>(self):
 Siguiendo con el ejemplo, si intentamos agregar un valor incorrecto, se enviará la request POST, pero la respuesta será el mismo formulario con un error asociado.
 
 ![image](https://user-images.githubusercontent.com/22943973/137013211-5da6e051-c0e4-45b5-abc2-613e2dea2eae.png)
+
+## Referencias y ejemplos
+https://www.youtube.com/watch?v=wVnQkKf-gHo
+https://docs.djangoproject.com/en/3.2/ref/forms/validation/
+
