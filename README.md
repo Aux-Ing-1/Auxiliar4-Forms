@@ -156,3 +156,6 @@ def clean_<nombre_del_field>(self):
 	    raise forms.ValidationError("<otro_string de error>")
 	return field
 ```
+Siguiendo con el ejemplo, si intentamos agregar un valor incorrecto, se enviará la request POST, pero la respuesta será el mismo formulario con un error asociado.
+
+![image](https://user-images.githubusercontent.com/22943973/137013211-5da6e051-c0e4-45b5-abc2-613e2dea2eae.png)
