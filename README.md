@@ -160,7 +160,13 @@ Siguiendo con el ejemplo, si intentamos agregar un valor incorrecto, se enviará
 
 ![image](https://user-images.githubusercontent.com/22943973/137013211-5da6e051-c0e4-45b5-abc2-613e2dea2eae.png)
 
+<!-- WIP
+## Estilos CSS en el form
+Como quizás habrás notado, al usar este método el formulario generado no tiene ningún estilo, y no es posible aplicarle directamente los estilos de Boostrap, como los que tenía anteriormente
+![image](https://user-images.githubusercontent.com/22943973/137032474-e315f592-2300-4ac0-a0ff-23f4a3a18114.png)
+-->
+
 ## Referencias y ejemplos
-https://www.youtube.com/watch?v=wVnQkKf-gHo
-https://docs.djangoproject.com/en/3.2/ref/forms/validation/
+- https://www.youtube.com/watch?v=wVnQkKf-gHo
+- https://docs.djangoproject.com/en/3.2/ref/forms/validation/
 
