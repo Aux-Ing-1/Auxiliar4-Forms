@@ -1,4 +1,4 @@
-# Auxiliar5-Forms
+# Auxiliar4-Forms
 
 En esta clase crearemos formularios utilizando las clases y métodos pre-hechos que nos entrega Django. Esta forma de hacerlo es útil para crear formularios sencillos que estén directamente asociados con el modelo de datos. Cabe destacar que, como en casi todo lo que hemos visto, esta no es la única manera de hacer esto y es posible que para distintas situaciones sea igual o más adecuado usar los métodos manuales que usamos anteriormente.
 
